@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Setting;
+use App\Traits\FlashMessages;
 use App\Traits\UploadAble;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -12,11 +13,24 @@ use App\Http\Controllers\BaseController;
 
 class SettingController extends BaseController
 {
+
+    use UploadAble;
+    use FlashMessages;
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $this->setPageTitle('Settings', 'Manage Settings');
+        return view('admin.settings.index');
+    }
+
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request)
+    public function update(Request $request): \Illuminate\Http\RedirectResponse
     {
         if ($request->has('site_logo') && ($request->file('site_logo') instanceof UploadedFile)) {
 

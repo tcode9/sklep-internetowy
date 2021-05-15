@@ -11,11 +11,11 @@ class SettingsTableSeeder extends Seeder
     protected $settings = [
         [
             'key'                       =>  'site_name',
-            'value'                     =>  'Sklep RTV AGD',
+            'value'                     =>  'Sleep RTV AGD',
         ],
         [
             'key'                       =>  'site_title',
-            'value'                     =>  'Sklep RTV AGD',
+            'value'                     =>  'Sleep RTV AGD',
         ],
         [
             'key'                       =>  'default_email_address',
