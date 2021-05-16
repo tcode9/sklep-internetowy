@@ -1,11 +1,11 @@
 <div class="tile">
     <form action="{{ route('admin.settings.update') }}" method="POST" role="form">
         @csrf
-        <h3 class="tile-title">General Settings</h3>
+        <h3 class="tile-title">Główne ustawienia</h3>
         <hr>
         <div class="tile-body">
             <div class="form-group">
-                <label class="control-label" for="site_name">Site Name</label>
+                <label class="control-label" for="site_name">Nazwa strony</label>
                 <input
                     class="form-control"
                     type="text"
@@ -16,7 +16,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="site_title">Site Title</label>
+                <label class="control-label" for="site_title">Tytuł strony</label>
                 <input
                     class="form-control"
                     type="text"
@@ -27,7 +27,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="default_email_address">Default Email Address</label>
+                <label class="control-label" for="default_email_address">Domyślny adres email</label>
                 <input
                     class="form-control"
                     type="email"
@@ -38,7 +38,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="currency_code">Currency Code</label>
+                <label class="control-label" for="currency_code">Aktualny kod</label>
                 <input
                     class="form-control"
                     type="text"
