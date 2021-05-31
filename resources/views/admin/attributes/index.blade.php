@@ -6,7 +6,7 @@
             <h1><i class="fa fa-tags"></i> {{ $pageTitle }}</h1>
             <p>{{ $subTitle }}</p>
         </div>
-        <a href="{{ route('admin.attributes.create') }}" class="btn btn-primary pull-right">Add Attribute</a>
+        <a href="{{ route('admin.attributes.create') }}" class="btn btn-primary pull-right">Dodaj Atrybut</a>
     </div>
     @include('admin.partials.flash')
     <div class="row">
