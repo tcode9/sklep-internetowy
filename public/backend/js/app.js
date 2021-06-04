@@ -2011,7 +2011,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "product-attributes",
   props: ['productid'],
@@ -19865,7 +19864,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "" } }, [
     _c("div", { staticClass: "tile" }, [
-      _c("h3", { staticClass: "tile-title" }, [_vm._v("Attribute Values")]),
+      _c("h3", { staticClass: "tile-title" }, [_vm._v("Wartość cechy")]),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -19874,7 +19873,7 @@ var render = function() {
           _c(
             "label",
             { staticClass: "control-label", attrs: { for: "value" } },
-            [_vm._v("Value")]
+            [_vm._v("Wartość")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -19889,7 +19888,7 @@ var render = function() {
             staticClass: "form-control",
             attrs: {
               type: "text",
-              placeholder: "Enter attribute value",
+              placeholder: "Wprowadź wartość cechy",
               id: "value",
               name: "value"
             },
@@ -19909,7 +19908,7 @@ var render = function() {
           _c(
             "label",
             { staticClass: "control-label", attrs: { for: "price" } },
-            [_vm._v("Price")]
+            [_vm._v("Cena")]
           ),
           _vm._v(" "),
           _c("input", {
@@ -19924,7 +19923,7 @@ var render = function() {
             staticClass: "form-control",
             attrs: {
               type: "number",
-              placeholder: "Enter attribute value price",
+              placeholder: "Wprowadź cenę",
               id: "price",
               name: "price"
             },
@@ -19959,7 +19958,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-                    _vm._v("Save\n                    ")
+                    _vm._v("Zapisz\n                    ")
                   ]
                 )
               : _vm._e(),
@@ -19979,7 +19978,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-                    _vm._v("Update\n                    ")
+                    _vm._v("Aktualizuj\n                    ")
                   ]
                 )
               : _vm._e(),
@@ -19999,7 +19998,7 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "fa fa-fw fa-lg fa-check-circle" }),
-                    _vm._v("Reset\n                    ")
+                    _vm._v("Resetuj\n                    ")
                   ]
                 )
               : _vm._e()
@@ -20009,7 +20008,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "tile" }, [
-      _c("h3", { staticClass: "tile-title" }, [_vm._v("Option Values")]),
+      _c("h3", { staticClass: "tile-title" }, [_vm._v("Zapisane wartości")]),
       _vm._v(" "),
       _c("div", { staticClass: "tile-body" }, [
         _c("div", { staticClass: "table-responsive" }, [
@@ -20102,11 +20101,11 @@ var staticRenderFns = [
       _c("tr", { staticClass: "text-center" }, [
         _c("th", [_vm._v("#")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Value")]),
+        _c("th", [_vm._v("Wartość")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Price")]),
+        _c("th", [_vm._v("Cena")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Action")])
+        _c("th", [_vm._v("Akcja")])
       ])
     ])
   }
@@ -20134,7 +20133,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "tile" }, [
-      _c("h3", { staticClass: "tile-title" }, [_vm._v("Attributes")]),
+      _c("h3", { staticClass: "tile-title" }, [_vm._v("Cechy")]),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -20194,7 +20193,7 @@ var render = function() {
     _vm.attributeSelected
       ? _c("div", { staticClass: "tile" }, [
           _c("h3", { staticClass: "tile-title" }, [
-            _vm._v("Add Attributes To Product")
+            _vm._v("Dodaj cechy do produktu")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -20257,7 +20256,7 @@ var render = function() {
                         staticClass: "control-label",
                         attrs: { for: "quantity" }
                       },
-                      [_vm._v("Quantity")]
+                      [_vm._v("Ilość")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -20289,7 +20288,7 @@ var render = function() {
                     _c(
                       "label",
                       { staticClass: "control-label", attrs: { for: "price" } },
-                      [_vm._v("Price")]
+                      [_vm._v("Cena")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -20312,13 +20311,7 @@ var render = function() {
                           _vm.currentPrice = $event.target.value
                         }
                       }
-                    }),
-                    _vm._v(" "),
-                    _c("small", { staticClass: "text-danger" }, [
-                      _vm._v(
-                        "This price will be added to the main price of product on frontend."
-                      )
-                    ])
+                    })
                   ])
                 ]),
                 _vm._v(" "),
@@ -20335,7 +20328,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fa fa-plus" }),
-                      _vm._v(" Add\n                ")
+                      _vm._v(" Dodaj\n                ")
                     ]
                   )
                 ])
@@ -20345,7 +20338,7 @@ var render = function() {
       : _vm._e(),
     _vm._v(" "),
     _c("div", { staticClass: "tile" }, [
-      _c("h3", { staticClass: "tile-title" }, [_vm._v("Product Attributes")]),
+      _c("h3", { staticClass: "tile-title" }, [_vm._v("Cechy produktu")]),
       _vm._v(" "),
       _c("div", { staticClass: "tile-body" }, [
         _c("div", { staticClass: "table-responsive" }, [
@@ -20420,7 +20413,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "parent" } }, [
-      _vm._v("Select an Attribute "),
+      _vm._v("Wybierz cechę "),
       _c("span", { staticClass: "m-l-5 text-danger" }, [_vm._v(" *")])
     ])
   },
@@ -20429,7 +20422,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "values" } }, [
-      _vm._v("Select an value "),
+      _vm._v("Wybierz wartość "),
       _c("span", { staticClass: "m-l-5 text-danger" }, [_vm._v(" *")])
     ])
   },
@@ -20439,13 +20432,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", { staticClass: "text-center" }, [
-        _c("th", [_vm._v("Value")]),
+        _c("th", [_vm._v("Wartość")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Qty")]),
+        _c("th", [_vm._v("Ilość")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Price")]),
+        _c("th", [_vm._v("Cena")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Action")])
+        _c("th", [_vm._v("Akcja")])
       ])
     ])
   }

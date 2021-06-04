@@ -5,7 +5,10 @@
                 <div class="col-lg-3">
                     <div class="brand-wrap">
                         <a href="{{ url('/') }}">
-                            <img class="logo" src="{{ asset('frontend/images/logo-dark.png') }}" alt="logo">
+                            <img class="logo" src="{{ asset('storage/'.config('settings.site_logo')) }}" alt="logo">
+                        </a>
+                        <a href="{{url('/')}}" style="text-decoration: inherit; color: black;">
+                        <h3>{{config('settings.site_name')}}</h3>
                         </a>
                     </div>
                 </div>

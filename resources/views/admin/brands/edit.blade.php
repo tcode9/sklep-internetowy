@@ -15,7 +15,7 @@
                     @csrf
                     <div class="tile-body">
                         <div class="form-group">
-                            <label class="control-label" for="name">Name <span class="m-l-5 text-danger"> *</span></label>
+                            <label class="control-label" for="name">Nazwa <span class="m-l-5 text-danger"> *</span></label>
                             <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="name" value="{{ old('name', $brand->name) }}"/>
                             <input type="hidden" name="id" value="{{ $brand->id }}">
                             @error('name') {{ $message }} @enderror
@@ -30,7 +30,7 @@
                                     </div>
                                 @endif
                                 <div class="col-md-10">
-                                    <label class="control-label">Brand Logo</label>
+                                    <label class="control-label">Logo marki</label>
                                     <input class="form-control @error('logo') is-invalid @enderror" type="file" id="logo" name="logo"/>
                                     @error('logo') {{ $message }} @enderror
                                 </div>
@@ -38,9 +38,8 @@
                         </div>
                     </div>
                     <div class="tile-footer">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Brand</button>
-                        &nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-secondary" href="{{ route('admin.brands.index') }}"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+                        <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Zaktualizuj</button>
+                        <a class="btn btn-danger" href="{{ route('admin.brands.index') }}"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Wroć</a>
                     </div>
                 </form>
             </div>

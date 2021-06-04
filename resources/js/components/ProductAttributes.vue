@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="tile">
-            <h3 class="tile-title">Attributes</h3>
+            <h3 class="tile-title">Cechy</h3>
             <hr>
             <div class="tile-body">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="parent">Select an Attribute <span class="m-l-5 text-danger"> *</span></label>
+                            <label for="parent">Wybierz cechę <span class="m-l-5 text-danger"> *</span></label>
                             <select id=parent class="form-control custom-select mt-15" v-model="attribute" @change="selectAttribute(attribute)">
                                 <option :value="attribute" v-for="attribute in attributes"> {{ attribute.name }} </option>
                             </select>
@@ -17,11 +17,11 @@
             </div>
         </div>
         <div class="tile" v-if="attributeSelected">
-            <h3 class="tile-title">Add Attributes To Product</h3>
+            <h3 class="tile-title">Dodaj cechy do produktu</h3>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="values">Select an value <span class="m-l-5 text-danger"> *</span></label>
+                        <label for="values">Wybierz wartość <span class="m-l-5 text-danger"> *</span></label>
                         <select id=values class="form-control custom-select mt-15" v-model="value" @change="selectValue(value)">
                             <option :value="value" v-for="value in attributeValues"> {{ value.value }} </option>
                         </select>
@@ -31,35 +31,34 @@
             <div class="row" v-if="valueSelected">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label" for="quantity">Quantity</label>
+                        <label class="control-label" for="quantity">Ilość</label>
                         <input class="form-control" type="number" id="quantity" v-model="currentQty"/>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label class="control-label" for="price">Price</label>
+                        <label class="control-label" for="price">Cena</label>
                         <input class="form-control" type="text" id="price" v-model="currentPrice"/>
-                        <small class="text-danger">This price will be added to the main price of product on frontend.</small>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <button class="btn btn-sm btn-primary" @click="addProductAttribute()">
-                        <i class="fa fa-plus"></i> Add
+                        <i class="fa fa-plus"></i> Dodaj
                     </button>
                 </div>
             </div>
         </div>
         <div class="tile">
-            <h3 class="tile-title">Product Attributes</h3>
+            <h3 class="tile-title">Cechy produktu</h3>
             <div class="tile-body">
                 <div class="table-responsive">
                     <table class="table table-sm">
                         <thead>
                         <tr class="text-center">
-                            <th>Value</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                            <th>Action</th>
+                            <th>Wartość</th>
+                            <th>Ilość</th>
+                            <th>Cena</th>
+                            <th>Akcja</th>
                         </tr>
                         </thead>
                         <tbody>

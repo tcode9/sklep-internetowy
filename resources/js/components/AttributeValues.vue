@@ -1,26 +1,26 @@
 <template>
     <div id="">
         <div class="tile">
-            <h3 class="tile-title">Attribute Values</h3>
+            <h3 class="tile-title">Wartość cechy</h3>
             <hr>
             <div class="tile-body">
                 <div class="form-group">
-                    <label class="control-label" for="value">Value</label>
+                    <label class="control-label" for="value">Wartość</label>
                     <input
                         class="form-control"
                         type="text"
-                        placeholder="Enter attribute value"
+                        placeholder="Wprowadź wartość cechy"
                         id="value"
                         name="value"
                         v-model="value"
                     />
                 </div>
                 <div class="form-group">
-                    <label class="control-label" for="price">Price</label>
+                    <label class="control-label" for="price">Cena</label>
                     <input
                         class="form-control"
                         type="number"
-                        placeholder="Enter attribute value price"
+                        placeholder="Wprowadź cenę"
                         id="price"
                         name="price"
                         v-model="price"
@@ -31,29 +31,29 @@
                 <div class="row d-print-none mt-2">
                     <div class="col-12 text-right">
                         <button class="btn btn-success" type="submit" @click.stop="saveValue()" v-if="addValue">
-                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Save
+                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Zapisz
                         </button>
                         <button class="btn btn-success" type="submit" @click.stop="updateValue()" v-if="!addValue">
-                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Update
+                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Aktualizuj
                         </button>
                         <button class="btn btn-primary" type="submit" @click.stop="reset()" v-if="!addValue">
-                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Reset
+                            <i class="fa fa-fw fa-lg fa-check-circle"></i>Resetuj
                         </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="tile">
-            <h3 class="tile-title">Option Values</h3>
+            <h3 class="tile-title">Zapisane wartości</h3>
             <div class="tile-body">
                 <div class="table-responsive">
                     <table class="table table-sm">
                         <thead>
                         <tr class="text-center">
                             <th>#</th>
-                            <th>Value</th>
-                            <th>Price</th>
-                            <th>Action</th>
+                            <th>Wartość</th>
+                            <th>Cena</th>
+                            <th>Akcja</th>
                         </tr>
                         </thead>
                         <tbody>

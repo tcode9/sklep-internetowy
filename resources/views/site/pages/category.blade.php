@@ -26,19 +26,19 @@
                                     </h4>
                                 </figcaption>
                                 <div class="bottom-wrap">
-                                    <a href="" class="btn btn-sm btn-success float-right"><i
-                                            class="fa fa-cart-arrow-down"></i> Buy Now</a>
+                                    <a href="{{ route('product.show', $product->slug) }}" class="btn btn-sm btn-success float-right"><i
+                                            class="fa fa-cart-arrow-down"></i> Kup</a>
                                     @if ($product->sale_price != 0)
                                         <div class="price-wrap h5">
                                             <span
-                                                class="price"> {{ config('settings.currency_symbol').$product->sale_price }} </span>
+                                                class="price"> {{ $product->price . ' ' . config('settings.currency_symbol')}} </span>
                                             <del
                                                 class="price-old"> {{ config('settings.currency_symbol').$product->price }}</del>
                                         </div>
                                     @else
                                         <div class="price-wrap h5">
                                             <span
-                                                class="price"> {{ config('settings.currency_symbol').$product->price }} </span>
+                                                class="price"> {{ $product->price . ' ' . config('settings.currency_symbol')}} </span>
                                         </div>
                                     @endif
                                 </div>

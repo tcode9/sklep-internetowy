@@ -29,7 +29,7 @@ class BrandController extends BaseController
     {
         $brands = $this->brandRepository->listBrands();
 
-        $this->setPageTitle('Brands', 'List of all brands');
+        $this->setPageTitle('Marki', 'Lista wszystkich marek');
         return view('admin.brands.index', compact('brands'));
     }
     /**
@@ -37,7 +37,7 @@ class BrandController extends BaseController
      */
     public function create()
     {
-        $this->setPageTitle('Brands', 'Create Brand');
+        $this->setPageTitle('Marki', 'Stwórz markę');
         return view('admin.brands.create');
     }
     /**
@@ -69,7 +69,7 @@ class BrandController extends BaseController
     {
         $brand = $this->brandRepository->findBrandById($id);
 
-        $this->setPageTitle('Brands', 'Edit Brand : '.$brand->name);
+        $this->setPageTitle('Marki', 'Edytuj markę : '.$brand->name);
         return view('admin.brands.edit', compact('brand'));
     }
     /**

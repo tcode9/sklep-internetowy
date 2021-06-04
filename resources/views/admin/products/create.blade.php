@@ -11,7 +11,7 @@
         <div class="col-md-3">
             <div class="tile p-0">
                 <ul class="nav flex-column nav-tabs user-tabs">
-                    <li class="nav-item"><a class="nav-link active" href="#general" data-toggle="tab">General</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#general" data-toggle="tab">Główne</a></li>
                 </ul>
             </div>
         </div>
@@ -21,15 +21,15 @@
                     <div class="tile">
                         <form action="{{ route('admin.products.store') }}" method="POST" role="form">
                             @csrf
-                            <h3 class="tile-title">Product Information</h3>
+                            <h3 class="tile-title">Informacje o produkcie</h3>
                             <hr>
                             <div class="tile-body">
                                 <div class="form-group">
-                                    <label class="control-label" for="name">Name</label>
+                                    <label class="control-label" for="name">Nazwa</label>
                                     <input
                                         class="form-control @error('name') is-invalid @enderror"
                                         type="text"
-                                        placeholder="Enter attribute name"
+                                        placeholder="Wpisz nazwę produktu"
                                         id="name"
                                         name="name"
                                         value="{{ old('name') }}"
@@ -45,7 +45,7 @@
                                             <input
                                                 class="form-control @error('sku') is-invalid @enderror"
                                                 type="text"
-                                                placeholder="Enter product sku"
+                                                placeholder="Wpisz kod SKU"
                                                 id="sku"
                                                 name="sku"
                                                 value="{{ old('sku') }}"
@@ -57,9 +57,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="brand_id">Brand</label>
+                                            <label class="control-label" for="brand_id">Marka</label>
                                             <select name="brand_id" id="brand_id" class="form-control @error('brand_id') is-invalid @enderror">
-                                                <option value="0">Select a brand</option>
+                                                <option value="0">Wybierz markę</option>
                                                 @foreach($brands as $brand)
                                                     <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                                                 @endforeach
@@ -73,7 +73,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="control-label" for="categories">Categories</label>
+                                            <label class="control-label" for="categories">Kategoria</label>
                                             <select name="categories[]" id="categories" class="form-control" multiple>
                                                 @foreach($categories as $category)
                                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -83,13 +83,13 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="control-label" for="price">Price</label>
+                                            <label class="control-label" for="price">Cena</label>
                                             <input
                                                 class="form-control @error('price') is-invalid @enderror"
                                                 type="text"
-                                                placeholder="Enter product price"
+                                                placeholder="Wpisz cenę"
                                                 id="price"
                                                 name="price"
                                                 value="{{ old('price') }}"
@@ -99,28 +99,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="control-label" for="special_price">Special Price</label>
-                                            <input
-                                                class="form-control"
-                                                type="text"
-                                                placeholder="Enter product special price"
-                                                id="special_price"
-                                                name="special_price"
-                                                value="{{ old('special_price') }}"
-                                            />
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="quantity">Quantity</label>
+                                            <label class="control-label" for="quantity">Ilość</label>
                                             <input
                                                 class="form-control @error('quantity') is-invalid @enderror"
                                                 type="number"
-                                                placeholder="Enter product quantity"
+                                                placeholder="Wpisz ilość"
                                                 id="quantity"
                                                 name="quantity"
                                                 value="{{ old('quantity') }}"
@@ -132,11 +119,11 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="weight">Weight</label>
+                                            <label class="control-label" for="weight">Waga</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
-                                                placeholder="Enter product weight"
+                                                placeholder="Wpisz wagę produktu"
                                                 id="weight"
                                                 name="weight"
                                                 value="{{ old('weight') }}"
@@ -145,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label" for="description">Description</label>
+                                    <label class="control-label" for="description">Opis</label>
                                     <textarea name="description" id="description" rows="8" class="form-control"></textarea>
                                 </div>
                                 <div class="form-group">
@@ -174,8 +161,8 @@
                             <div class="tile-footer">
                                 <div class="row d-print-none mt-2">
                                     <div class="col-12 text-right">
-                                        <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Product</button>
-                                        <a class="btn btn-danger" href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Go Back</a>
+                                        <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Zapisz produkt</button>
+                                        <a class="btn btn-danger" href="{{ route('admin.products.index') }}"><i class="fa fa-fw fa-lg fa-arrow-left"></i>Wroć</a>
                                     </div>
                                 </div>
                             </div>

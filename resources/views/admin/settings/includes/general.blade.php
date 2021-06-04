@@ -38,7 +38,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="currency_code">Aktualny kod</label>
+                <label class="control-label" for="currency_code">Aktualny kod waluty</label>
                 <input
                     class="form-control"
                     type="text"
@@ -49,7 +49,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="currency_symbol">Currency Symbol</label>
+                <label class="control-label" for="currency_symbol">Symbol</label>
                 <input
                     class="form-control"
                     type="text"
@@ -63,7 +63,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Settings</button>
+                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Aktualizuj</button>
                 </div>
             </div>
         </div>

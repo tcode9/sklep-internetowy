@@ -1,21 +1,21 @@
 <div class="tile">
     <form action="{{ route('admin.settings.update') }}" method="POST" role="form">
         @csrf
-        <h3 class="tile-title">Footer &amp; SEO</h3>
+        <h3 class="tile-title">Stopka &amp; SEO</h3>
         <hr>
         <div class="tile-body">
             <div class="form-group">
-                <label class="control-label" for="footer_copyright_text">Footer Copyright Text</label>
+                <label class="control-label" for="footer_copyright_text">Tekst stopki</label>
                 <textarea
                     class="form-control"
                     rows="4"
-                    placeholder="Enter footer copyright text"
+                    placeholder="Wpisz tekst"
                     id="footer_copyright_text"
                     name="footer_copyright_text"
                 >{{ config('settings.footer_copyright_text') }}</textarea>
             </div>
             <div class="form-group">
-                <label class="control-label" for="seo_meta_title">SEO Meta Title</label>
+                <label class="control-label" for="seo_meta_title">SEO Meta tytuł</label>
                 <input
                     class="form-control"
                     type="text"
@@ -26,7 +26,7 @@
                 />
             </div>
             <div class="form-group">
-                <label class="control-label" for="seo_meta_description">SEO Meta Description</label>
+                <label class="control-label" for="seo_meta_description">SEO Meta opis</label>
                 <textarea
                     class="form-control"
                     rows="4"
@@ -39,7 +39,7 @@
         <div class="tile-footer">
             <div class="row d-print-none mt-2">
                 <div class="col-12 text-right">
-                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update Settings</button>
+                    <button class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i> Aktualizuj</button>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
             <h1><i class="fa fa-shopping-bag"></i> {{ $pageTitle }}</h1>
             <p>{{ $subTitle }}</p>
         </div>
-        <a href="{{ route('admin.products.create') }}" class="btn btn-primary pull-right">Add Product</a>
+        <a href="{{ route('admin.products.create') }}" class="btn btn-primary pull-right">Dodaj produkt</a>
     </div>
     @include('admin.partials.flash')
     <div class="row">
@@ -18,10 +18,10 @@
                         <tr>
                             <th> # </th>
                             <th> SKU </th>
-                            <th> Name </th>
-                            <th class="text-center"> Brand </th>
-                            <th class="text-center"> Categories </th>
-                            <th class="text-center"> Price </th>
+                            <th> Nazwa </th>
+                            <th class="text-center"> Marka </th>
+                            <th class="text-center"> Kategorie </th>
+                            <th class="text-center"> Cena </th>
                             <th class="text-center"> Status </th>
                             <th style="width:100px; min-width:100px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
                         </tr>
@@ -38,12 +38,12 @@
                                         <span class="badge badge-info">{{ $category->name }}</span>
                                     @endforeach
                                 </td>
-                                <td>{{ config('settings.currency_symbol') }}{{ $product->price }}</td>
+                                <td>{{ $product->price }} {{ config('settings.currency_symbol') }}</td>
                                 <td class="text-center">
                                     @if ($product->status == 1)
-                                        <span class="badge badge-success">Active</span>
+                                        <span class="badge badge-success">aktywny</span>
                                     @else
-                                        <span class="badge badge-danger">Not Active</span>
+                                        <span class="badge badge-danger">nieaktywny</span>
                                     @endif
                                 </td>
                                 <td class="text-center">

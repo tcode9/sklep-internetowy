@@ -44,7 +44,7 @@ class CategoryController extends BaseController
     {
         $categories = $this->categoryRepository->treeList();
 
-        $this->setPageTitle('Categories', 'Create Category');
+        $this->setPageTitle('Kategorie', 'Stwórz kategorię');
         return view('admin.categories.create', compact('categories'));
     }
 
@@ -80,7 +80,7 @@ class CategoryController extends BaseController
         $targetCategory = $this->categoryRepository->findCategoryById($id);
         $categories = $this->categoryRepository->treeList();
 
-        $this->setPageTitle('Categories', 'Edit Category : '.$targetCategory->name);
+        $this->setPageTitle('Kategorie', 'Edytuj kategorię : '.$targetCategory->name);
         return view('admin.categories.edit', compact('categories', 'targetCategory'));
     }
 
