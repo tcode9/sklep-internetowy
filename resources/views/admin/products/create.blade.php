@@ -41,9 +41,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="sku">SKU</label>
+                                            <label class="control-label" for="sku">Opis</label>
                                             <input
-                                                class="form-control @error('sku') is-invalid @enderror"
+                                                class="form-control @error('description') is-invalid @enderror"
                                                 type="text"
                                                 placeholder="Wpisz kod SKU"
                                                 id="sku"
