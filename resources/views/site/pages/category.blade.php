@@ -27,7 +27,7 @@
                                 </figcaption>
                                 <div class="bottom-wrap">
                                     <a href="{{ route('product.show', $product->slug) }}" class="btn btn-sm btn-success float-right"><i
-                                            class="fa fa-cart-arrow-down"></i> Kup</a>
+                                            class="fa fa-check-circle"></i> Sprawdź</a>
                                     @if ($product->sale_price != 0)
                                         <div class="price-wrap h5">
                                             <span
@@ -45,7 +45,7 @@
                             </figure>
                         </div>
                     @empty
-                        <p>No Products found in {{ $category->name }}.</p>
+                        <p>Nie znaleziono żadnego produktu w kategorii {{ $category->name }}.</p>
                     @endforelse
                 </div>
             </div>

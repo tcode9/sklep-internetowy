@@ -48,6 +48,8 @@
                                         <dd class="col-sm-9">{{ $product->sku }}</dd>
                                         <dt class="col-sm-3">Waga</dt>
                                         <dd class="col-sm-9">{{ $product->weight }}</dd>
+                                        <dt class="col-sm-3">Marka</dt>
+                                        <dd class="col-sm-9">{{ $product->brand->name }}</dd>
                                     </dl>
                                     <div class="mb-3">
                                         @if ($product->sale_price > 0)
