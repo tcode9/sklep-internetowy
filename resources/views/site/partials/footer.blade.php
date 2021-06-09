@@ -3,57 +3,38 @@
         <section class="footer-top padding-top">
             <div class="row">
                 <aside class="col-sm-3 col-md-3 white">
-                    <h5 class="title">Customer Services</h5>
+                    <h5 class="title">Linki społecznościowe</h5>
                     <ul class="list-unstyled">
-                        <li> <a href="#">Help center</a></li>
-                        <li> <a href="#">Money refund</a></li>
-                        <li> <a href="#">Terms and Policy</a></li>
-                        <li> <a href="#">Open dispute</a></li>
+                        <li> <a href="#">{{config('settings.social_facebook')}}</a></li>
+                        <li> <a href="#">{{config('settings.social_twitter')}}</a></li>
+                        <li> <a href="#">{{config('settings.social_instagram')}}</a></li>
                     </ul>
                 </aside>
                 <aside class="col-sm-3  col-md-3 white">
-                    <h5 class="title">My Account</h5>
+                    <h5 class="title">O nas</h5>
                     <ul class="list-unstyled">
-                        <li> <a href="#"> User Login </a></li>
-                        <li> <a href="#"> User register </a></li>
-                        <li> <a href="#"> Account Setting </a></li>
-                        <li> <a href="#"> My Orders </a></li>
-                        <li> <a href="#"> My Wishlist </a></li>
-                    </ul>
-                </aside>
-                <aside class="col-sm-3  col-md-3 white">
-                    <h5 class="title">About</h5>
-                    <ul class="list-unstyled">
-                        <li> <a href="#"> Our history </a></li>
-                        <li> <a href="#"> How to buy </a></li>
-                        <li> <a href="#"> Delivery and payment </a></li>
-                        <li> <a href="#"> Advertice </a></li>
-                        <li> <a href="#"> Partnership </a></li>
+                        <li> <a href="#"> Nasza historia </a></li>
+                        <li> <a href="#"> Dostawa i płatność </a></li>
+                        <li> <a href="#"> Partnerzy </a></li>
                     </ul>
                 </aside>
                 <aside class="col-sm-3">
                     <article class="white">
-                        <h5 class="title">Contacts</h5>
+                        <h5 class="title">Kontakt</h5>
                         <p>
-                            <strong>Phone: </strong> +123456789
+                            <strong>Telefon: </strong> +123456789
                             <br>
-                            <strong>Fax:</strong> +123456789
+                            <strong>Email:</strong> przykład
                         </p>
-
-                        <div class="btn-group white">
-                            <a class="btn btn-facebook" title="Facebook" target="_blank" href="#"><i
-                                    class="fab fa-facebook-f  fa-fw"></i></a>
-                            <a class="btn btn-instagram" title="Instagram" target="_blank" href="#"><i
-                                    class="fab fa-instagram  fa-fw"></i></a>
-                            <a class="btn btn-youtube" title="Youtube" target="_blank" href="#"><i
-                                    class="fab fa-youtube  fa-fw"></i></a>
-                            <a class="btn btn-twitter" title="Twitter" target="_blank" href="#"><i
-                                    class="fab fa-twitter  fa-fw"></i></a>
-                        </div>
                     </article>
                 </aside>
             </div>
             <!-- row.// -->
+            <div class="row">
+                <div>
+                    <p style="font-variant: small-caps; margin: 5px">{{config('settings.footer_copyright_text')}}</p>
+                </div>
+            </div>
             <br>
         </section>
     </div>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Site;
 
+use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Contracts\OrderContract;
 use App\Http\Controllers\Controller;
+use Cart;
 
-class CheckoutController extends Controller
+class CheckoutController extends BaseController
 {
     protected $orderRepository;
 
@@ -22,10 +24,10 @@ class CheckoutController extends Controller
 
     public function placeOrder(Request $request)
     {
-        // Before storing the order we should implement the
-        // request validation which I leave it to you
-        $order = $this->orderRepository->storeOrderDetails($request->all());
 
-        dd($order);
+        $this->orderRepository->storeOrderDetails($request->all());
+        Cart::clear();
+        return $this->responseRedirect('homepage', 'Order added successfully', 'success', false, false);
+
     }
 }

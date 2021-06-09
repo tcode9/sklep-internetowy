@@ -41,8 +41,7 @@ class OrderRepository extends BaseRepository implements OrderContract
             $items = Cart::getContent();
 
             foreach ($items as $item) {
-                // A better way will be to bring the product id with the cart items
-                // you can explore the package documentation to send product id with the cart
+
                 $product = Product::where('name', $item->name)->first();
 
                 $orderItem = new OrderItem([
