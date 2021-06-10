@@ -11,11 +11,11 @@ class SettingsTableSeeder extends Seeder
     protected $settings = [
         [
             'key'                       =>  'site_name',
-            'value'                     =>  'Sleep RTV AGD',
+            'value'                     =>  'Sklep RTV AGD',
         ],
         [
             'key'                       =>  'site_title',
-            'value'                     =>  'Sleep RTV AGD',
+            'value'                     =>  'Sklep RTV AGD',
         ],
         [
             'key'                       =>  'default_email_address',
@@ -23,11 +23,11 @@ class SettingsTableSeeder extends Seeder
         ],
         [
             'key'                       =>  'currency_code',
-            'value'                     =>  'GBP',
+            'value'                     =>  'PLN',
         ],
         [
             'key'                       =>  'currency_symbol',
-            'value'                     =>  '£',
+            'value'                     =>  'zł',
         ],
         [
             'key'                       =>  'site_logo',

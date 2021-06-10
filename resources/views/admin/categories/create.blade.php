@@ -34,9 +34,9 @@
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <label class="form-check-label">
+                                <!-- <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" id="featured" name="featured"/>Wybierz kategorię
-                                </label>
+                                </label> -->
                             </div>
                         </div>
                         <div class="form-group">
